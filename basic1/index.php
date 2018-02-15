@@ -3,6 +3,9 @@ require 'functions.php';
 $query = require 'bootstrap.php';
 
 $tasks = $query->selectAll('todos');
-//dd($tasks);
+
+$task = $query->getRowById('todos', $id = 1);
+
+dd($task);
 
 require 'index-view.php';
